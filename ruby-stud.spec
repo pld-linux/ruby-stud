@@ -1,16 +1,16 @@
 #
 # Conditional build:
-%bcond_without	tests		# build without tests
+%bcond_with	tests		# build without tests
 
 %define	pkgname	stud
 Summary:	stud - common code techniques
 Name:		ruby-%{pkgname}
-Version:	0.0.21
+Version:	0.0.22
 Release:	1
-License:	GPL v2+ or Ruby
+License:	Apache v2.0
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
-# Source0-md5:	3439c86e911782f21921ca2fc8c9c268
+# Source0-md5:	1176e3529f9b0f136bd3a84dc290ba8d
 URL:		https://github.com/jordansissel/ruby-stud
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.656
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Small reusable bits of code I'm tired of writing over and over. A
-library form of my software-patterns Github repo.
+library form of my software-patterns github repo.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
@@ -43,5 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README.md LICENSE
 %{ruby_vendorlibdir}/%{pkgname}
 %{ruby_specdir}/%{pkgname}-%{version}.gemspec
