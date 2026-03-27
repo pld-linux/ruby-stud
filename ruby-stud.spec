@@ -5,12 +5,12 @@
 %define	pkgname	stud
 Summary:	stud - common code techniques
 Name:		ruby-%{pkgname}
-Version:	0.0.22
+Version:	0.0.23
 Release:	1
 License:	Apache v2.0
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
-# Source0-md5:	1176e3529f9b0f136bd3a84dc290ba8d
+# Source0-md5:	d915604fa5a70dfe0c3e7991dba52ef0
 URL:		https://github.com/jordansissel/ruby-stud
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.656
